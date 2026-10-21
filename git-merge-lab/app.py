@@ -7,3 +7,10 @@ def divide_numbers(a: float, b: float) -> float:
         raise ValueError("Cannot divide by zero")
     return a / b
 
+
+def multiply_numbers(a: int, b: int) -> int:
+    return a * b
+
+
+def subtract_numbers(a: int, b: int) -> int:
+    return a - b

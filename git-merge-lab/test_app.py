@@ -3,6 +3,8 @@ import pytest
 
 from app import add_numbers
 from app import divide_numbers
+from app import multiply_numbers
+from app import subtract_numbers
 
 
 def test_add_numbers():
@@ -19,3 +21,14 @@ def test_divide_numbers():
 def test_divide_by_zero_raises_error():
     with pytest.raises(ValueError):
         divide_numbers(5, 0)
+
+def test_multiply_numbers():
+    assert multiply_numbers(4, 3) == 12
+    assert multiply_numbers(-2, 3) == -6
+    assert multiply_numbers(5, 0) == 0
+
+
+def test_subtract_numbers():
+    assert subtract_numbers(5, 3) == 2
+    assert subtract_numbers(3, 5) == -2
+    assert subtract_numbers(0, 0) == 0
